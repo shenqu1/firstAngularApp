@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  loadedFeature = "recipe";
 
+  onNavigate(feature:string) {
+    this.loadedFeature = feature;
+  }
 }
